@@ -6,7 +6,7 @@
 - Run all commands in the root of the project
 - Run setup script to initialize a virtual environment and install dependencies. You may need to give it the correct priviledges to run.
 ```
-./setup.sh
+source ./scripts/setup.sh
 ```
 - Install system dependencies: Please install the right one for your OS
   ### MacOS
@@ -23,7 +23,7 @@
   pip install pyaudio
   ```
 
-- Start the virtual environment
+- Start the virtual environment if not already started
 ```
 source ./venv/bin/activate
 ```

@@ -9,8 +9,8 @@ from selenium.webdriver.common.keys import Keys
 
 import speech_recognition as sr
 
-from chatGPT import *
-from resembleAI import *
+from modules.chatGPT import *
+from modules.resembleAI import *
 
 
 load_dotenv()
