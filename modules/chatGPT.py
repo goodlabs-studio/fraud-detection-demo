@@ -1,4 +1,4 @@
-def ask_chat_gpt(driver, By, EC, WebDriverWait, username, password, search_text):
+def login_to_chat_gpt(driver, By, EC, WebDriverWait, username, password):    
     login_btn = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//button[1]"))
     )
@@ -40,7 +40,8 @@ def ask_chat_gpt(driver, By, EC, WebDriverWait, username, password, search_text)
         EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Done')]"))
     )
     done_btn.click()
-    
+
+def ask_chat_gpt(driver, By, EC, WebDriverWait, search_text):    
     chat_input = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, "//textarea"))
     )
@@ -56,7 +57,7 @@ def ask_chat_gpt(driver, By, EC, WebDriverWait, username, password, search_text)
     )
     
     AI_response = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'markdown')]"))
+        EC.presence_of_element_located((By.XPATH, "(//div[contains(@class, 'markdown')])[last()]"))
     )
     response_text = AI_response.text
     
