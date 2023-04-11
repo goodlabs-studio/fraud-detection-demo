@@ -1,7 +1,16 @@
-pocketsphinx==5.0.0
-PyAudio==0.2.13
 python-dotenv==1.0.0
 selenium==4.8.2
-SpeechRecognition==3.9.0
 undetected-chromedriver==3.4.6
 screeninfo==0.8.1
+numpy
+tqdm
+more-itertools
+transformers>=4.19.0
+ffmpeg-python==0.2.0
+click
+pyaudio
+SpeechRecognition
+pydub
+git+https://github.com/openai/whisper.git
+--extra-index-url https://download.pytorch.org/whl/cu113
+torch

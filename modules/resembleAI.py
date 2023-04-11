@@ -1,4 +1,4 @@
-def login_to_resemble_AI(driver, By, EC, WebDriverWait, Keys, username, password, project):    
+def login_to_resemble_AI(driver, By, EC, WebDriverWait, Keys, username, password, project, clip):    
     username_input = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.NAME, "user[email]"))
     )
@@ -14,9 +14,9 @@ def login_to_resemble_AI(driver, By, EC, WebDriverWait, Keys, username, password
         EC.presence_of_element_located((By.XPATH, "//form[@action='/projects/{}/clips']/input[@value='Clips']".format(project)))
     )
 
-def text_to_speech(driver, By, EC, WebDriverWait, Keys, project, clip, paragraph):    
     driver.get('https://app.resemble.ai/projects/{}/clips/{}'.format(project, clip))
-    
+
+def text_to_speech(driver, By, EC, WebDriverWait, Keys, paragraph):    
     word_input = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, '//*[@data-slate-leaf="true"]'))
     )
